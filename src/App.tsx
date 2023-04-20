@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import AsciiTreeGenerator from "./AsciiTreeGenerator";
 
-function App() {
+const App: React.FC = () => {
+  const [repoUrl, setRepoUrl] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div style={styles.app}>
+      <header style={styles.appHeader}>
+        <h3>GitHub Repository ASCII Tree Generator</h3>
+        <input
+          type="text"
+          placeholder="Paste GitHub repo URL here"
+          value={repoUrl}
+          onChange={(e) => setRepoUrl(e.target.value)}
+          style={styles.input}
+        />
+        {repoUrl && <AsciiTreeGenerator repoUrl={repoUrl} />}
       </header>
     </div>
   );
-}
+};
 
 export default App;
+
+const styles = {
+  app: {
+    textAlign: "center" as const,
+  },
+  appHeader: {
+    backgroundColor: "#282c34",
+    minHeight: "100vh",
+    display: "flex",
+    flexDirection: "column" as const,
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "calc(10px + 2vmin)",
+    color: "white",
+  },
+  input: {
+    width: "40%",
+    padding: "6px 10px",
+  }
+};

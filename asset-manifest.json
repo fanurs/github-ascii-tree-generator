@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/github-ascii-tree/static/css/main.e6c13ad2.css",
+    "main.js": "/github-ascii-tree/static/js/main.338f5eb2.js",
+    "index.html": "/github-ascii-tree/index.html",
+    "main.e6c13ad2.css.map": "/github-ascii-tree/static/css/main.e6c13ad2.css.map",
+    "main.338f5eb2.js.map": "/github-ascii-tree/static/js/main.338f5eb2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.338f5eb2.js"
+  ]
+}

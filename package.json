@@ -46,5 +46,5 @@
     ]
   },
   "proxy": "https://api.github.com/",
-  "homepage": "https://fanurs.github.io/github-ascii-tree"
+  "homepage": "https://fanurs.github.io/github-ascii-tree-generator"
 }
